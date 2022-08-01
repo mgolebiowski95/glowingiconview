@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_700"
+        android:divider="@drawable/divider_space_16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <com.mgsoftware.glowingicon.GlowIconView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:GlowIconView_glowEnabled="true"
+            app:GlowIconView_glowInset="16dp"
+            app:GlowIconView_glowRadius="8dp"
+            app:GlowIconView_glowStyle="solid"
+            app:GlowIconView_srcInset="18dp"
+            app:srcCompat="@drawable/medal" />
+
+        <com.mgsoftware.glowingicon.GlowIconView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:GlowIconView_glowEnabled="true"
+            app:GlowIconView_glowInset="16dp"
+            app:GlowIconView_glowRadius="8dp"
+            app:GlowIconView_glowStyle="outer"
+            app:GlowIconView_srcInset="18dp"
+            app:srcCompat="@drawable/medal" />
+
+        <com.mgsoftware.glowingicon.GlowIconView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:GlowIconView_glowEnabled="true"
+            app:GlowIconView_glowInset="16dp"
+            app:GlowIconView_glowRadius="8dp"
+            app:GlowIconView_glowStyle="normal"
+            app:GlowIconView_srcInset="18dp"
+            app:srcCompat="@drawable/science" />
+
+        <com.mgsoftware.glowingicon.GlowIconView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:GlowIconView_glowColor="@color/yellow_500"
+            app:GlowIconView_glowEnabled="true"
+            app:GlowIconView_glowInset="16dp"
+            app:GlowIconView_glowRadius="8dp"
+            app:GlowIconView_glowStyle="inner"
+            app:GlowIconView_srcInset="18dp"
+            app:srcCompat="@drawable/science" />
+
+    </LinearLayout>
+
+</layout>

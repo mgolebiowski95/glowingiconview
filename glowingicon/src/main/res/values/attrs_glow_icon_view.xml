@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GlowIconView">
+        <attr name="GlowIconView_glowEnabled" format="boolean"/>
+        <attr name="GlowIconView_glowColor" format="color"/>
+        <attr name="GlowIconView_glowRadius" format="dimension"/>
+        <attr name="GlowIconView_glowStyle" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="solid" value="1"/>
+            <enum name="outer" value="2"/>
+            <enum name="inner" value="3"/>
+        </attr>
+        <attr name="GlowIconView_srcInset" format="dimension"/>
+        <attr name="GlowIconView_glowInset" format="dimension"/>
+    </declare-styleable>
+</resources>

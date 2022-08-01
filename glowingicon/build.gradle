@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 32
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        project.archivesBaseName = "glowingicon"
+        project.version = android.defaultConfig.versionName
+    }
+    publishNonDefault true
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.aar')) {
+                def fileName = "${archivesBaseName}-${version}.aar"
+                outputFileName = fileName
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.0-alpha05'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation "org.mini2Dx:gdx-math:1.9.13"
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    baseName = 'glowingicon'
+    from android.sourceSets.main.java.srcDirs
+}
