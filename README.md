@@ -20,7 +20,7 @@ dependencies {
 ```
 
 ## Screenshots
-![](https://github.com/mgolebiowski95/autosizetextview/blob/master/screenshots/Screenshot_1659352280.png)
+![](https://github.com/mgolebiowski95/glowingiconview/blob/master/screenshots/Screenshot_1659352280.png)
 
 ## Usage
 ```xml
